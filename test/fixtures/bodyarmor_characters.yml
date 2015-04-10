@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  character_id: 
+  body_armor_id: 
+
+two:
+  character_id: 
+  body_armor_id: 

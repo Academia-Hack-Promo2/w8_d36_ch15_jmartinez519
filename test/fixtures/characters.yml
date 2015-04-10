@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  kind_of_character: MyString
+  age: 1
+  vitality: 1
+  life_points: 1
+  ability: MyString
+  level: 1
+  points_of_defense: 1
+  points_of_attack: 1
+  weapon_id: 
+  body_armor_id: 
+  attack_id: 
+  match_id: 
+
+two:
+  name: MyString
+  kind_of_character: MyString
+  age: 1
+  vitality: 1
+  life_points: 1
+  ability: MyString
+  level: 1
+  points_of_defense: 1
+  points_of_attack: 1
+  weapon_id: 
+  body_armor_id: 
+  attack_id: 
+  match_id: 

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player1: 1
+  player2: 1
+  vitality1: 1
+  vitality2: 1
+  ganador: 1
+  retiro: false
+
+two:
+  player1: 1
+  player2: 1
+  vitality1: 1
+  vitality2: 1
+  ganador: 1
+  retiro: false

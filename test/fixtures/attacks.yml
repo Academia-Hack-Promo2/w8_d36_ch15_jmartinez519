@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kind: 
+  danger: 1
+  weapon_id: 
+  character: MyString
+
+two:
+  kind: 
+  danger: 1
+  weapon_id: 
+  character: MyString
