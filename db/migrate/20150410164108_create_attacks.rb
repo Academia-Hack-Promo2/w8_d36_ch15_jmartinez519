@@ -5,7 +5,7 @@ class CreateAttacks < ActiveRecord::Migration
       t.string :name
       t.integer :danger
       t.references :weapon, index: true, foreign_key: true
-      t.string :character
+      t.string :character_name
       t.references :character, index: true, foreign_key: true
       t.timestamps null: false
     end

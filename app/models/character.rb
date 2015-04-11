@@ -7,5 +7,12 @@ class Character < ActiveRecord::Base
   has_many :attack
   has_many :match
 
-  validates :name, presence: true
+  validates :name, :kind_of_character, :age, :ability, :player_id, presence: true
+  validates :name, :kind_of_character, :ability, format: { :with => /\A[a-z A-Z]+\z/}
+  validates :age, :player_id, numericality: true
+  validates :name, uniqueness: true
+  validates :name, length: { maximum: 15 }
+  validates :kind_of_character, :ability, length: { maximum: 10 }
+  validates :age, length: { maximum: 2 }
+
 end

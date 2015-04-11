@@ -14,29 +14,29 @@
 ActiveRecord::Schema.define(version: 20150410184028) do
 
   create_table "attacks", force: :cascade do |t|
-    t.string   "kind",         limit: 255
-    t.string   "name",         limit: 255
-    t.integer  "danger",       limit: 4
-    t.integer  "weapon_id",    limit: 4
-    t.string   "character",    limit: 255
-    t.integer  "character_id", limit: 4
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "kind",           limit: 255
+    t.string   "name",           limit: 255
+    t.integer  "danger",         limit: 4
+    t.integer  "weapon_id",      limit: 4
+    t.string   "character_name", limit: 255
+    t.integer  "character_id",   limit: 4
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   add_index "attacks", ["character_id"], name: "index_attacks_on_character_id", using: :btree
   add_index "attacks", ["weapon_id"], name: "index_attacks_on_weapon_id", using: :btree
 
   create_table "body_armors", force: :cascade do |t|
-    t.string   "kind",         limit: 255
-    t.string   "name",         limit: 255
-    t.string   "character",    limit: 255
-    t.integer  "defense",      limit: 4
-    t.integer  "danger",       limit: 4
-    t.integer  "money",        limit: 4
-    t.integer  "character_id", limit: 4
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "kind",           limit: 255
+    t.string   "name",           limit: 255
+    t.string   "character_name", limit: 255
+    t.integer  "defense",        limit: 4
+    t.integer  "danger",         limit: 4
+    t.integer  "money",          limit: 4
+    t.integer  "character_id",   limit: 4
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   add_index "body_armors", ["character_id"], name: "index_body_armors_on_character_id", using: :btree

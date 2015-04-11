@@ -9,7 +9,7 @@ class AttacksController < ApplicationController
 		if attack_new.save
 			render json: "Se creado un nuevo attack"
 		else
-			render json: {message: "No se creo", error: attack_new.full.errors.messages}
+			render json: {message: "No se creo"}
 		end
 	end
 
@@ -30,6 +30,6 @@ class AttacksController < ApplicationController
 	end
 
 	def parametros
-		params.require(:attack).permit(:name, :kind, :danger, :character, :weapon_id, :character_id)
+		params.require(:attack).permit(:name, :kind, :danger, :character_name, :weapon_id, :character_id)
 	end
 end

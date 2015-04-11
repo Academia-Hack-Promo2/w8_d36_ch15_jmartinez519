@@ -1,11 +1,11 @@
 class BodyArmorsController < ApplicationController
 	def index
-		body_armors = Body_armors.all
+		body_armors = BodyArmor.all
 		render json: body_armors
 	end
 
 	def create
-		bodyarmors_new = Body_armors.new(parametros)
+		bodyarmors_new = BodyArmor.new(parametros)
 		if bodyarmors_new.save
 			render json: "Se creado un nuevo body armors"
 		else
@@ -14,22 +14,22 @@ class BodyArmorsController < ApplicationController
 	end
 
 	def show
-		bodyarmors_find = Body_armors.find(params[:id])
+		bodyarmors_find = Body_armor.find(params[:id])
 		render json: bodyarmors_find
 	end
 
 	def update
-		bodyarmors_update = Body_armors.update(params[:id], parametros)
+		bodyarmors_update = Body_armor.update(params[:id], parametros)
 		render json: bodyarmors_update
 	end
 
 	def destroy
-		boydarmors_find = Body_armors.find(params[:id])
-		bodyarmors_delete = Body_armors.delete(params[:id])
+		boydarmors_find = Body_armor.find(params[:id])
+		bodyarmors_delete = Body_armor.delete(params[:id])
 		render json: bodyarmors_find
 	end
 
 	def parametros
-		params.require(:attack).permit(:name, :kind, :danger, :character, :character_id, :defense, :money)
+		params.require(:body_armor).permit(:name, :kind, :danger, :character_id, :character_name, :defense, :money)
 	end
 end

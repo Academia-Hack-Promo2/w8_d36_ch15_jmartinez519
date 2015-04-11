@@ -3,7 +3,7 @@ class CreateBodyArmors < ActiveRecord::Migration
     create_table :body_armors do |t|
       t.string :kind
       t.string :name
-      t.string :character
+      t.string :character_name
       t.integer :defense
       t.integer :danger
       t.integer :money
