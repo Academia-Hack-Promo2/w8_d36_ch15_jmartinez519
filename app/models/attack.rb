@@ -1,6 +1,6 @@
 class Attack < ActiveRecord::Base
   belongs_to :character
-  has_many :weapon
+  has_many :weapons
 
   validates :name, :kind, :danger, :weapon_id, :character_id, presence: true
   validates :name, :kind, format: { :with => /\A[a-z A-Z]+\z/}

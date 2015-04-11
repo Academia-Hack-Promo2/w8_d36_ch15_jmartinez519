@@ -1,5 +1,5 @@
 class Match < ActiveRecord::Base
-	belongs_to :character
+	belongs_to :characters
 
   validates :character1_id, :character2_id :vitality1, :vitality2, :ganador, :retiro, presence: true
   validates :character1_id, :vitality1, :vitality2 :character2_id, :ganador, numericality: true
