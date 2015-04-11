@@ -1,7 +1,7 @@
 class Character < ActiveRecord::Base
   belongs_to :player
-  has_many :character_weapons
-  has_many :bodyarmor_characters
+  has_and_belongs_to_many :weapons
+  has_and_belongs_to_many :bodyarmors
   has_many :weapons
   has_many :body_armors
   has_many :attacks

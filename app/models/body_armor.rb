@@ -1,6 +1,5 @@
 class BodyArmor < ActiveRecord::Base
-	belongs_to :character
-	has_many :bodyarmor_characters
+	has_and_belongs_to_many :characters
 
 	validates :name, :kind, :danger, :character_id, :character_name, :money, :defense, presence: true
 	validates :danger, :weapon_id, :character_id, :money, :defense, numericality: true
