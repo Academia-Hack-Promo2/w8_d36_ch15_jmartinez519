@@ -1,5 +1,5 @@
 class Player < ActiveRecord::Base
-  has_many :character
+  has_many :character, dependent: :destroy
 
   validates :name, :last_name, :email, presence: true
   validates :name, :last_name, format: { :with => /\A[a-z A-Z]+\z/}
